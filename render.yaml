@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: 𝔎𝔦𝔫𝔤_𝔅𝔩𝔢𝔰𝔰 𝔗𝔢𝔠𝔥-whatsapp-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: OWNER_NUMBER
+        sync: false
+      - key: BOT_NAME
+        value: 𝔎𝔦𝔫𝔤_𝔅𝔩𝔢𝔰𝔰 𝔗𝔢𝔠𝔥 Bot
+      - key: PREFIX
+        value: .
+      - key: UNSPLASH_KEY
+        sync: false
+      - key: GIPHY_KEY
+        sync: false
+    healthCheckPath: /
